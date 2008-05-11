@@ -158,8 +158,8 @@
 ;; (setq desktop-save-mode 1)
 ;; (desktop-read)
 
-;;; Smart buffer switching
-(iswitchb-mode)
+;;; Smart switching
+(ido-mode)
 
 ;;; Stole this verbatim from Steve Yegge
 (global-set-key "\C-w" 'backward-kill-word)

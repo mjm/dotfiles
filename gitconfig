@@ -1,3 +1,7 @@
 [user]
 	name = Matt Moriarity
 	email = matt.moriarity@gmail.com
+[color]
+	status = auto
+	branch = auto
+	ui = auto

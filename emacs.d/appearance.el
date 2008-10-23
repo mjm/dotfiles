@@ -1,4 +1,5 @@
 (require 'color-theme)
+;(color-theme-initialize)
 (color-theme-scintilla)
 
 (set-terminal-coding-system 'iso-8859-1)

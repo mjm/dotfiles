@@ -2,6 +2,10 @@
 (global-set-key "\C-x\C-k" 'kill-region)
 (global-set-key "\C-c\C-k" 'kill-region)
 
+(global-set-key "\C-x\C-u" 'undo)
+
+(global-set-key "\C-x\C-b" 'ido-switch-buffer)
+
 (global-set-key "\M- " 'set-mark-command)
 (global-set-key "\r" 'newline-and-indent)
 (global-set-key "\C-j" 'newline)

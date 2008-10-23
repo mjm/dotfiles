@@ -11,15 +11,19 @@
 
 (load "~/.emacs.d/tweaks.el")
 (load "~/.emacs.d/appearance.el")
+(load "~/.emacs.d/clojure.el")
 (load "~/.emacs.d/slime.el")
 (load "~/.emacs.d/arc.el")
 (load "~/.emacs.d/paredit.el")
 (load "~/.emacs.d/shortcuts.el")
 (load "~/.emacs.d/w3m.el")
-(load "~/.emacs.d/rails.el")
+;(load "~/.emacs.d/rails.el")
 (load "~/.emacs.d/haskell.el")
 (load "~/.emacs.d/ecb.el")
 (load "~/.emacs.d/sage.el")
+(load "~/.emacs.d/js2.el")
+(load "~/.emacs.d/psgml.el")
+(load "~/.emacs.d/matlab.el")
 
 ;;; Check the time to finish loading.
 (message "My .emacs loaded in %ds"

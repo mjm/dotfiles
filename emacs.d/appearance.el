@@ -4,7 +4,7 @@
 
 (set-terminal-coding-system 'iso-8859-1)
 (set-face-attribute 'default nil
-                    :family "inconsolata" :height 130)
+                    :family "consolas" :height 130)
 (setq default-frame-alist '((width . 168)
                             (height . 56)
                             (top . 0)

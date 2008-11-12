@@ -12,3 +12,5 @@
 (global-set-key [M-S-return] 'find-file-at-point)
 
 (global-set-key "\C-cy" 'clipboard-yank)
+
+(global-set-key "\C-cm" 'magit-status)

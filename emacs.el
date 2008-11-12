@@ -9,23 +9,30 @@
 
 (add-to-list 'load-path "~/usr/share/emacs")
 
-(load "~/.emacs.d/tweaks.el")
-(load "~/.emacs.d/appearance.el")
-(load "~/.emacs.d/clojure.el")
-(load "~/.emacs.d/slime.el")
-;(load "~/.emacs.d/arc.el")
-(load "~/.emacs.d/paredit.el")
-(load "~/.emacs.d/shortcuts.el")
-(load "~/.emacs.d/w3m.el")
-;(load "~/.emacs.d/rails.el")
-(load "~/.emacs.d/haskell.el")
-(load "~/.emacs.d/ecb.el")
-;(load "~/.emacs.d/sage.el")
-(load "~/.emacs.d/js2.el")
-(load "~/.emacs.d/psgml.el")
-(load "~/.emacs.d/matlab.el")
-(load "~/.emacs.d/auctex.el")
-(load "~/.emacs.d/magit.el")
+(setq files-to-load
+      '(tweaks
+        appearance
+        clojure
+        slime
+        ;arc
+        paredit
+        shortcuts
+        w3m
+        ;rails
+        haskell
+        ecb
+        ;sage
+        js2
+        psgml
+        matlab
+        auctex
+        magit))
+
+(mapcar (lambda (f)
+          (load (concat "~/.emacs.d/"
+                        (symbol-name f)
+                        ".el")))
+        files-to-load)
 
 ;;; Check the time to finish loading.
 (message "My .emacs loaded in %ds"

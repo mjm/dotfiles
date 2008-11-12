@@ -24,6 +24,8 @@
 (load "~/.emacs.d/js2.el")
 (load "~/.emacs.d/psgml.el")
 (load "~/.emacs.d/matlab.el")
+(load "~/.emacs.d/auctex.el")
+(load "~/.emacs.d/magit.el")
 
 ;;; Check the time to finish loading.
 (message "My .emacs loaded in %ds"

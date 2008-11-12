@@ -9,4 +9,5 @@
                             (height . 56)
                             (top . 0)
                             (left . 0)
-                            (tool-bar-line . 0)))
+                            (tool-bar-line . 0)
+                            (cursor-type . bar)))

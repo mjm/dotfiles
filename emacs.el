@@ -18,7 +18,8 @@
         paredit
         shortcuts
         w3m
-        ;rails
+        ruby
+        rails
         haskell
         ecb
         ;sage

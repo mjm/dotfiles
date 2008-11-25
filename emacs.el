@@ -27,13 +27,17 @@
         psgml
         matlab
         auctex
-        magit))
+        magit
+        erc
+        markdown
+        blogmax))
 
-(mapcar (lambda (f)
-          (load (concat "~/.emacs.d/"
-                        (symbol-name f)
-                        ".el")))
-        files-to-load)
+(defun load-config (f)
+  (load (concat "~/.emacs.d/"
+                (symbol-name f)
+                ".el")))
+
+(mapcar 'load-config files-to-load)
 
 ;;; Check the time to finish loading.
 (message "My .emacs loaded in %ds"

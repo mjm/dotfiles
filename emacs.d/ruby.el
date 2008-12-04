@@ -11,5 +11,7 @@
 (add-hook 'ruby-mode-hook
           '(lambda ()
              (inf-ruby-keys)))
-;; If you have Emacs 19.2x or older, use rubydb2x                              
+;; If you have Emacs 19.2x or older, use rubydb2x
 (autoload 'rubydb "rubydb3x" "Ruby debugger" t)
+
+(provide 'moriarity-ruby)

@@ -18,3 +18,5 @@
 (global-set-key [(control x) (right)] 'windmove-right)
 (global-set-key [(control x) (up)] 'windmove-up)
 (global-set-key [(control x) (down)] 'windmove-down)
+
+(provide 'moriarity-shortcuts)

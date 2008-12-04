@@ -6,3 +6,5 @@
 (setq matlab-indent-function t)
 (setq matlab-shell-command "/Applications/Matlab/bin/matlab")
 (setq matlab-shell-command-switches '("-nosplash" "-nodesktop"))
+
+(provide 'moriarity-matlab)

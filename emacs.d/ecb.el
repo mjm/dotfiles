@@ -4,3 +4,5 @@
 (require 'ecb-autoloads)
 
 (semantic-load-enable-code-helpers)
+
+(provide 'moriarity-ecb)

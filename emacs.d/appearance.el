@@ -12,3 +12,5 @@
                             ;(left . 0)
 ;                            (tool-bar-line . 0)
 ;                            (cursor-type . bar)))
+
+(provide 'moriarity-appearance)

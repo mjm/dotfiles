@@ -12,3 +12,5 @@
 (setq auto-mode-alist (cons '("\\.pxd\\'" . pyrex-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.pxi\\'" . python-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.sage\\'" . python-mode) auto-mode-alist))
+
+(provide 'moriarity-sage)

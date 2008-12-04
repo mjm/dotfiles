@@ -4,3 +4,5 @@
 (autoload 'camldebug "camldebug" "Debug caml mode" nil)
 
 (add-to-list 'auto-mode-alist '("\\.ml[iyl]?$" . caml-mode))
+
+(provide 'moriarity-ocaml)

@@ -5,3 +5,5 @@
       '(("freenode.net" "#emacs" "#clojure")))
 
 (erc :server "irc.freenode.net" :nick "cooldude127")
+
+(provide 'moriarity-erc)

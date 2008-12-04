@@ -14,19 +14,14 @@
         appearance
         clojure
         slime
-        ;arc
         paredit
         shortcuts
         w3m
         ruby
         rails
         haskell
-        ecb
-        ;sage
         js2
-        psgml
         matlab
-        auctex
         magit
         erc
         markdown

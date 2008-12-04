@@ -34,3 +34,5 @@
         (remove-if (lambda (buffer)
                      (find (aref (buffer-name buffer) 0) " *"))
                    (buffer-list))))
+
+(provide 'moriarity-tabbar)

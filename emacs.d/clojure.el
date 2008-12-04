@@ -9,3 +9,5 @@
 
 (require 'clojure-auto)
 (require 'clojure-paredit)
+
+(provide 'moriarity-clojure)

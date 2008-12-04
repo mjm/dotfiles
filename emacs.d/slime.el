@@ -37,3 +37,5 @@
          (list* :buffer "*inferior-lisp-sbcl*"
                 (slime-lookup-lisp-implementation slime-lisp-implementations
                                                   'sbcl))))
+
+(provide 'moriarity-slime)

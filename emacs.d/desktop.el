@@ -3,3 +3,5 @@
 (desktop-load-default)
 (setq desktop-save-mode 1)
 (desktop-read)
+
+(provide 'moriarity-desktop)

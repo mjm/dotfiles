@@ -102,6 +102,18 @@ a console application.
 
 ;;;***
 
+;;;### (autoloads (paredit-mode) "paredit" "../usr/share/elpa-alt/paredit.el"
+;;;;;;  (18753 11904))
+;;; Generated autoloads from ../usr/share/elpa-alt/paredit.el
+
+(autoload (quote paredit-mode) "paredit" "\
+Minor mode for pseudo-structurally editing Lisp code.
+\\<paredit-mode-map>
+
+\(fn &optional ARG)" t nil)
+
+;;;***
+
 ;;;### (autoloads (twitter-status-edit twitter-get-friends-timeline)
 ;;;;;;  "twitter" "../usr/share/elpa-alt/twitter.el" (18747 8086))
 ;;; Generated autoloads from ../usr/share/elpa-alt/twitter.el
@@ -137,17 +149,16 @@ Just some alien fruit salad to keep you in the zone.
 ;;;***
 
 ;;;### (autoloads nil nil ("../usr/share/elpa-alt/blogmax.el" "../usr/share/elpa-alt/clojure-auto.el"
-;;;;;;  "../usr/share/elpa-alt/clojure-paredit.el" "../usr/share/elpa-alt/paredit.el"
+;;;;;;  "../usr/share/elpa-alt/clojure-paredit.el" "../usr/share/elpa-alt/markdown-mode.el"
 ;;;;;;  "moriarity-appearance.el" "moriarity-arc.el" "moriarity-auctex.el"
-;;;;;;  "moriarity-blogmax.el" "moriarity-clojure.el" "moriarity-defuns.el"
-;;;;;;  "moriarity-desktop.el" "moriarity-ecb.el" "moriarity-erc.el"
-;;;;;;  "moriarity-eshell.el" "moriarity-haskell.el" "moriarity-js2.el"
-;;;;;;  "moriarity-lisp.el" "moriarity-magit.el" "moriarity-markdown.el"
-;;;;;;  "moriarity-matlab.el" "moriarity-misc.el" "moriarity-ocaml.el"
-;;;;;;  "moriarity-paredit.el" "moriarity-psgml.el" "moriarity-rails.el"
-;;;;;;  "moriarity-ruby.el" "moriarity-sage.el" "moriarity-scala.el"
-;;;;;;  "moriarity-shortcuts.el" "moriarity-slime.el" "moriarity-tabbar.el"
-;;;;;;  "moriarity-w3m.el") (18749 14575 210064))
+;;;;;;  "moriarity-blogmax.el" "moriarity-clojure.el" "moriarity-desktop.el"
+;;;;;;  "moriarity-ecb.el" "moriarity-erc.el" "moriarity-eshell.el"
+;;;;;;  "moriarity-haskell.el" "moriarity-js2.el" "moriarity-lisp.el"
+;;;;;;  "moriarity-magit.el" "moriarity-markdown.el" "moriarity-matlab.el"
+;;;;;;  "moriarity-ocaml.el" "moriarity-paredit.el" "moriarity-psgml.el"
+;;;;;;  "moriarity-rails.el" "moriarity-ruby.el" "moriarity-sage.el"
+;;;;;;  "moriarity-scala.el" "moriarity-tabbar.el" "moriarity-w3m.el")
+;;;;;;  (18753 11911 911880))
 
 ;;;***
 

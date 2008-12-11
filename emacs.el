@@ -18,6 +18,7 @@
 (require 'uniquify)
 (require 'ansi-color)
 (require 'recentf)
+(require 'imenu)
 
 ;;; Load the package manager
 (require 'package)

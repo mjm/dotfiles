@@ -31,11 +31,11 @@
 (define-key lisp-mode-shared-map (kbd "C-c l") "lambda")
 
 (defface paren-face
-   '((((class color) (background dark))
-      (:foreground "grey20"))
-     (((class color) (background light))
-      (:foreground "grey55")))
-   "Face used to dim parentheses."
-   :group 'starter-kit-faces)
+  '((((class color) (background dark))
+     (:foreground "grey20"))
+    (((class color) (background light))
+     (:foreground "grey55")))
+  "Face used to dim parentheses."
+  :group 'starter-kit-faces)
 
 (provide 'moriarity-lisp)

@@ -102,17 +102,17 @@
   (interactive)
   (byte-recompile-directory (expand-file-name "~/.emacs.d") 0))
 
-(defun regen-autoloads ()
+(defun regen-autoloads (&optional force-regen)
   "Regenerate the autoload definitions file if necessary and load it."
-  (interactive)
-  (if (or (not (file-exists-p autoload-file))
-          ;; TODO: make this more readable
-          (< (+ (car (nth 5 (file-attributes autoload-file))) 20)
-             (car (current-time))))
-      (let ((generated-autoload-file autoload-file))
-        (message "Updating autoloads...")
-        (update-directory-autoloads dotfiles-dir
-                                    "~/usr/share/elpa-alt")))
+  (interactive "P")
+  (let ((autoload-dir "~/usr/share/elpa-alt")
+        (generated-autoload-file autoload-file))
+    (when (or force-regen
+              (not (file-exists-p autoload-file))
+              (some (lambda (f) (file-newer-than-file-p f autoload-file))
+                    (directory-files autoload-dir t "\\.el$")))
+      (message "Updating autoloads...")
+      (update-directory-autoloads autoload-dir)))
   (load autoload-file))
 
 ;; TODO: fix this

@@ -2,3 +2,7 @@
 /emacs.d/tramp
 /semantic.cache
 /emacs.d/auto-save-list/
+/emacs.d/elpa
+*.elc
+.DS_Store
+/emacs.d/url/cookies

@@ -1,11 +1,11 @@
 (require 'color-theme)
-(color-theme-initialize)
-(color-theme-subtle-hacker)
+;; (color-theme-initialize)
+(require 'zenburn)
+(color-theme-zenburn)
 
 (set-terminal-coding-system 'iso-8859-1)
 (set-face-attribute 'default nil
                     :family "consolas" :height 130)
-(message "the value of default-frame-alist is %s" default-frame-alist)
 ;(setq default-frame-alist '(;(width . 168)
                             ;(height . 56)
                             ;(top . 0)

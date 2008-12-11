@@ -1,5 +1,3 @@
-(setq *emacs-load-start* (current-time))
-
 ;;; Start the Emacs server so we can use emacsclient
 (server-start)
 
@@ -7,36 +5,31 @@
 (setq custom-file "~/.emacs-custom.el")
 (load custom-file 'noerror)
 
-(add-to-list 'load-path "~/usr/share/emacs")
+(setq dotfiles-dir "~/.emacs.d/")
+(add-to-list 'load-path dotfiles-dir)
+(add-to-list 'load-path (concat dotfiles-dir "elpa"))
+(add-to-list 'load-path "~/usr/share/elpa-alt")
+(setq autoload-file (concat dotfiles-dir "loaddefs.el"))
+
+;;; Load things that will used often
+(require 'cl)
+(require 'saveplace)
+(require 'ffap)
+(require 'uniquify)
+(require 'ansi-color)
+(require 'recentf)
+
+;;; Load the package manager
+(require 'package)
+(package-initialize)
 
 (setq files-to-load
-      '(tweaks
-        appearance
-        clojure
-        slime
-        paredit
-        shortcuts
-        w3m
-        ruby
-        rails
-        haskell
-        js2
-        matlab
-        magit
-        erc
-        markdown
-        blogmax))
+      '(misc defuns clojure lisp slime shortcuts ruby
+        rails matlab markdown appearance blogmax eshell))
 
-(defun load-config (f)
-  (load (concat "~/.emacs.d/"
-                (symbol-name f)
-                ".el")))
+(defun load-config (file)
+  (require (intern (concat "moriarity-" (symbol-name file)))))
 
 (mapcar 'load-config files-to-load)
 
-;;; Check the time to finish loading.
-(message "My .emacs loaded in %ds"
-         (destructuring-bind (hi lo ms) (current-time)
-           (- (+ hi lo)
-              (+ (first *emacs-load-start*)
-                 (second *emacs-load-start*)))))
+(regen-autoloads)

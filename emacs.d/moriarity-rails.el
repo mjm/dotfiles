@@ -1,5 +1,5 @@
-(add-to-list 'load-path "/Users/mattmoriarity/usr/share/emacs/emacs-rails")
-(require 'rails)
+(add-to-list 'load-path "~/usr/src/rinari")
+(require 'rinari)
 
 (autoload 'haml-mode "haml-mode" "Major mode for HAML template language" t)
 (autoload 'sass-mode "sass-mode" "Major mode for SASS CSS templates" t)

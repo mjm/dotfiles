@@ -60,4 +60,10 @@
              (file-name-directory buffer-file-name))
           (buffer-name))))
 
+;; Create directories that don't exist when saving
+(add-hook 'before-save-hook
+          '(lambda ()
+             (or (file-exists-p (file-name-directory buffer-file-name))
+                 (make-directory (file-name-directory buffer-file-name) t))))
+
 (provide 'moriarity-misc)

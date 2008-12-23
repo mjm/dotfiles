@@ -13,10 +13,9 @@
               (if (file-exists-p (concat buffer-file-name "c"))
                   (delete-file (concat buffer-file-name "c"))))))
 
-(when (boundp 'paredit-mode)
-  (add-hook 'lisp-mode-hook (lambda () (paredit-mode +1)))
-  (add-hook 'emacs-lisp-mode-hook (lambda () (paredit-mode +1)))
-  (add-hook 'arc-mode-hook (lambda () (paredit-mode +1))))
+(add-hook 'lisp-mode-hook (lambda () (paredit-mode +1)))
+(add-hook 'emacs-lisp-mode-hook (lambda () (paredit-mode +1)))
+(add-hook 'arc-mode-hook (lambda () (paredit-mode +1)))
 ;;; Clojure does it's paredit handling special since it uses brackets
 ;;; as well as parentheses.
 

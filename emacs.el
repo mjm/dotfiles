@@ -11,6 +11,10 @@
 (add-to-list 'load-path "~/usr/share/elpa-alt")
 (setq autoload-file (concat dotfiles-dir "loaddefs.el"))
 
+;;; Set the path to be right
+(setenv "PATH" (concat "/usr/local/bin:" (getenv "PATH")))
+(add-to-list 'exec-path "/usr/local/bin")
+
 ;;; Load things that will used often
 (require 'cl)
 (require 'saveplace)

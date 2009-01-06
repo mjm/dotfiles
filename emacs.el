@@ -30,7 +30,7 @@
 
 (setq files-to-load
       '(misc defuns clojure lisp slime shortcuts ruby
-        rails matlab markdown appearance blogmax eshell))
+        rails matlab markdown appearance blogmax eshell org))
 
 (defun load-config (file)
   (require (intern (concat "moriarity-" (symbol-name file)))))

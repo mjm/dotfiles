@@ -12,8 +12,9 @@
 (setq autoload-file (concat dotfiles-dir "loaddefs.el"))
 
 ;;; Set the path to be right
-(setenv "PATH" (concat "/usr/local/bin:" (getenv "PATH")))
+(setenv "PATH" (concat "/usr/local/bin:/usr/texbin:" (getenv "PATH")))
 (add-to-list 'exec-path "/usr/local/bin")
+(add-to-list 'exec-path "/usr/texbin")
 
 ;;; Load things that will used often
 (require 'cl)

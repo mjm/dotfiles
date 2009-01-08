@@ -5,6 +5,7 @@
 		  "/opt/local/sbin:"
 		  "/usr/local/bin:"
 		  "/usr/local/sbin:"
+		  "/usr/texbin:"
 		  (expand-file-name "~/bin:")
 		  (getenv "PATH")))
   ;;; Emacs has it's own PATH too
@@ -13,5 +14,6 @@
 		  "/opt/local/sbin"
 		  "/usr/local/bin"
 		  "/usr/local/sbin"
+		  "/usr/texbin"
 		  ,(expand-file-name "~/bin"))
 		exec-path)))

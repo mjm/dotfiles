@@ -50,3 +50,6 @@
 
 ;;; Make apropos just like another help function
 (global-set-key (kbd "C-h a") 'apropos)
+
+;;; Access magit from a convenient hotkey
+(global-set-key (kbd "C-c m") 'magit-status)

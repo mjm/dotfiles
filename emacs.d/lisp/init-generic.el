@@ -30,3 +30,11 @@
 
 ;;; Use y and n instead of yes or no
 (defalias 'yes-or-no-p 'y-or-n-p)
+
+;;; Setup backups to get out of the way
+(setq backup-directory-alist '(("." . "~/.emacs.d/backups")))
+(setq delete-old-versions t)
+(setq kept-new-versions 6)
+(setq kept-old-versions 2)
+(setq version-control t)
+(setq backup-by-copying t)

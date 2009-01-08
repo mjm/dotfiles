@@ -17,6 +17,9 @@
 ;;; Show matching parentheses
 (show-paren-mode 1)
 
+;;; Show column numbers
+(column-number-mode t)
+
 ;;; Enable ido-mode
 (ido-mode)
 (setq ido-enable-prefix nil

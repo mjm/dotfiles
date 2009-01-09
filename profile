@@ -24,3 +24,6 @@ git_status() {
 export PS1="
 \u:\w\$(__git_ps1) \$(git_status)
 → "
+
+# Setup the editor to use Emacs
+export EDITOR="emacsclient -t"

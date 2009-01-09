@@ -17,3 +17,5 @@
 		  "/usr/texbin"
 		  ,(expand-file-name "~/bin"))
 		exec-path)))
+
+(setq browse-url-browser-function 'browse-url-default-macosx-browser)

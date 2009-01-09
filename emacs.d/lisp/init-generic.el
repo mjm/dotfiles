@@ -3,12 +3,12 @@
       font-lock-maximum-decoration t
       inhibit-startup-message t
       transient-mark-mode t
+      indent-tabs-mode nil
       color-theme-is-global t
       imenu-auto-rescan t
       truncate-partial-width-windows nil
       uniquify-buffer-name-style 'forward
       ;; next line should go in a mac-specific file
-      browse-url-browser-function 'browse-url-default-macosx-browser
       semanticdb-default-save-directory "~/.semantic.cache")
 
 ;;; Be able to edit compressed files

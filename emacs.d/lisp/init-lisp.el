@@ -12,9 +12,9 @@
 ;;; Dim parentheses to emphasize the code
 (defface paren-face
   '((((class color) (background dark))
-     (:foreground "grey20"))
+     (:foreground "#888888"))
     (((class color) (background light))
-     (:foreground "grey55")))
+     (:foreground "#666666")))
   "Face used to dim parentheses."
   :group 'starter-kit-faces)
 (dolist (mode '(emacs-lisp-mode

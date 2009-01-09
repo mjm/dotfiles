@@ -7,19 +7,21 @@
 
 (eval-after-load "slime"
   '(progn
-     (setq inferior-lisp-program "sbcl"
-	   slime-complete-symbol*-fancy t
-	   slime-complete-symbol-function 'slime-fuzzy-complete-symbol
-	   slime-when-complete-filename-expand t
-	   slime-truncate-lines nil
-	   slime-autodoc-use-multiline-p t)
-
+     (setq slime-complete-symbol*-fancy t
+           slime-complete-symbol-function 'slime-fuzzy-complete-symbol
+           slime-when-complete-filename-expand t
+           slime-truncate-lines nil
+           slime-autodoc-use-multiline-p t)
+     
+     (add-to-list 'slime-lisp-implementations
+		  '(sbcl ("sbcl")))
+     
      (slime-setup '(slime-fancy slime-asdf))
 
      (global-set-key (kbd "C-c s") 'slime-selector)))
 
 (add-hook 'lisp-mode-hook
-	  (lambda ()
-	    (cond ((not (featurep 'slime))
-		   (require 'slime)
-		   (normal-mode)))))
+          (lambda ()
+            (cond ((not (featurep 'slime))
+                   (require 'slime)
+                   (normal-mode)))))

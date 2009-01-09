@@ -1,7 +1,7 @@
 ;;; Set the load path for slime, which is maintained through clbuild
 (setq clbuild-dir (expand-file-name "~/lisp/clbuild/"))
 (add-to-list 'load-path (concat clbuild-dir "source/slime"))
-(add-to-list 'load-path (concat clbuild-dir "source/slime/contrib")))
+(add-to-list 'load-path (concat clbuild-dir "source/slime/contrib"))
 
 (require 'slime-autoloads)
 

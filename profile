@@ -15,7 +15,7 @@ if [ -f /opt/local/etc/bash_completion ]; then
 fi
 
 git_status() {
-    if current_git_status=$(git status | grep 'added to commit' 2> /dev/null); then
+    if current_git_status=$(git status 2> /dev/null | grep 'added to commit'); then
 	echo "☠"
     fi
 }

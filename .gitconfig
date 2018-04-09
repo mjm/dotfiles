@@ -1,0 +1,29 @@
+[alias]
+	amend = commit --amend
+
+	head = "!git r -1"
+	h = "!git head"
+	r = "!GIT_NO_PAGER=1 git l -20"
+	l = "!. ~/.githelpers && pretty_git_log"
+	la = "!git l --all"
+  m = "!git l --author mmoriarity"
+	b = "!. ~/.githelpers && pretty_git_branch"
+	bs = "!. ~/.githelpers && pretty_git_branch_sorted"
+
+[user]
+	name = Matt Moriarity
+	email = matt@mattmoriarity.com
+
+[diff]
+[color]
+	ui = auto
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[help]
+	autocorrect = 1
+[core]
+	excludesfile = ~/.gitignore_global

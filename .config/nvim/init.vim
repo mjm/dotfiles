@@ -42,6 +42,8 @@ set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
 " Mappings
 
 inoremap jj <Esc>
+" for my norman keyboard
+inoremap nn <Esc>
 
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k

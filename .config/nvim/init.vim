@@ -4,8 +4,8 @@ Plug 'dracula/vim'
 Plug 'tpope/vim-fugitive'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'keith/swift.vim'
-Plug 'scrooloose/syntastic'
 Plug 'fatih/vim-go'
+Plug 'w0rp/ale'
 
 " Initialize plugin system
 call plug#end()

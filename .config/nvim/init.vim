@@ -45,8 +45,6 @@ autocmd FileType swift setlocal sw=4 ts=4
 " Mappings
 
 inoremap jj <Esc>
-" for my norman keyboard
-inoremap nn <Esc>
 
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k

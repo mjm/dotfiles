@@ -21,6 +21,7 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
+set termguicolors
 set background=dark
 colorscheme dracula
 

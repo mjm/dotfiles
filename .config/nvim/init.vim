@@ -55,6 +55,8 @@ nnoremap <CR> :nohlsearch<cr>
 
 nnoremap <leader><leader> <C-^>
 
+nnoremap <leader>t :w\|:!rspec<cr>
+
 function! InsertTabWrapper()
     let col = col('.') - 1
     if !col || getline('.')[col - 1] !~ '\k'

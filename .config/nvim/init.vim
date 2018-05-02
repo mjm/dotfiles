@@ -40,9 +40,6 @@ let mapleader=","
 
 set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
 
-" Filetype settings
-autocmd FileType swift setlocal sw=4 ts=4
-
 " Mappings
 
 inoremap jj <Esc>

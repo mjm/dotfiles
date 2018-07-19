@@ -1,15 +1,21 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
-Plug 'dracula/vim'
-Plug 'tpope/vim-fugitive'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'keith/swift.vim'
-Plug 'fatih/vim-go'
-Plug 'w0rp/ale'
-Plug 'tpope/vim-dispatch'
-Plug 'radenling/vim-dispatch-neovim'
+Plug 'AndrewRadev/splitjoin.vim'
 Plug 'direnv/direnv.vim'
+Plug 'dracula/vim'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'fatih/vim-go'
 Plug 'hashivim/vim-hashicorp-tools'
+Plug 'itchyny/lightline.vim'
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
+Plug 'keith/swift.vim'
+Plug 'radenling/vim-dispatch-neovim'
+Plug 'tpope/vim-dispatch'
+Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'w0rp/ale'
 
 " Initialize plugin system
 call plug#end()
@@ -40,6 +46,8 @@ set showtabline=2
 set wildmode=longest,list
 set wildmenu
 
+set noshowmode
+
 let mapleader=","
 noremap \ ,
 
@@ -48,6 +56,9 @@ set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
 au BufNewFile,BufRead,BufWrite *.md,*.markdown syntax match Comment /\%^---\_.\{-}---$/
 
 " Mappings
+
+nnoremap <c-p> :GFiles<cr>
+nnoremap <c-q> :Files<cr>
 
 inoremap jj <Esc>
 

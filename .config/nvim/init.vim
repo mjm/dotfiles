@@ -7,6 +7,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'fatih/vim-go'
 Plug 'hashivim/vim-hashicorp-tools'
 Plug 'itchyny/lightline.vim'
+Plug 'janko-m/vim-test'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'keith/swift.vim'
@@ -55,6 +56,8 @@ set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
 
 au BufNewFile,BufRead,BufWrite *.md,*.markdown syntax match Comment /\%^---\_.\{-}---$/
 
+let test#strategy = "neovim"
+
 " Mappings
 
 nnoremap <c-p> :GFiles<cr>
@@ -70,7 +73,10 @@ nnoremap <CR> :nohlsearch<cr>
 
 nnoremap <leader><leader> <C-^>
 
-nnoremap <leader>t :w\|:!rspec<cr>
+nnoremap <leader>t :w\|:TestSuite<cr>
+nnoremap <leader>f :w\|:TestFile<cr>
+nnoremap <leader>n :w\|:TestNearest<cr>
+nnoremap <leader>l :w\|:TestLast<cr>
 
 nnoremap <leader>m <C-w>=20<C-w>>
 

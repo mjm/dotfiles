@@ -1,11 +1,17 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'dracula/vim'
+Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-fugitive'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'keith/swift.vim'
 Plug 'fatih/vim-go'
 Plug 'w0rp/ale'
+Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-surround'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
+Plug 'AndrewRadev/splitjoin.vim'
 
 " Initialize plugin system
 call plug#end()
@@ -36,6 +42,8 @@ set showtabline=2
 set wildmode=longest,list
 set wildmenu
 
+set noshowmode
+
 let mapleader=","
 
 set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
@@ -43,6 +51,9 @@ set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
 au BufNewFile,BufRead,BufWrite *.md,*.markdown syntax match Comment /\%^---\_.\{-}---$/
 
 " Mappings
+
+nnoremap <c-p> :GFiles<cr>
+nnoremap <c-q> :Files<cr>
 
 inoremap jj <Esc>
 

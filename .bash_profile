@@ -1,7 +1,6 @@
 
 export PATH="$HOME/bin:$PATH"
 export EDITOR=nvim
-export PKG_CONFIG_PATH=/usr/local/opt/libressl/lib/pkgconfig
 
 # Path to the bash it configuration
 export BASH_IT="/Users/matt/.bash_it"

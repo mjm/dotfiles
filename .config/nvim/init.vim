@@ -41,6 +41,7 @@ set wildmode=longest,list
 set wildmenu
 
 let mapleader=","
+noremap \ ,
 
 set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
 

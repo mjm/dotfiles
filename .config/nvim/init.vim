@@ -6,6 +6,10 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'keith/swift.vim'
 Plug 'fatih/vim-go'
 Plug 'w0rp/ale'
+Plug 'tpope/vim-dispatch'
+Plug 'radenling/vim-dispatch-neovim'
+Plug 'direnv/direnv.vim'
+Plug 'hashivim/vim-hashicorp-tools'
 
 " Initialize plugin system
 call plug#end()

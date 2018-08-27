@@ -58,12 +58,15 @@ au BufNewFile,BufRead,BufWrite *.md,*.markdown syntax match Comment /\%^---\_.\{
 
 let test#strategy = "neovim"
 
+set shell=bash\ -l
+
 " Mappings
 
 nnoremap <c-p> :GFiles<cr>
 nnoremap <c-q> :Files<cr>
 
 inoremap jj <Esc>
+tnoremap jj <C-\><C-n>
 
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k

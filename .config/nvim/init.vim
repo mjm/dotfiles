@@ -1,9 +1,13 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'AndrewRadev/splitjoin.vim'
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'Shougo/denite.nvim'
+Plug 'Shougo/deoplete.nvim'
 Plug 'direnv/direnv.vim'
 Plug 'dracula/vim'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'elixir-editors/vim-elixir'
 Plug 'ElmCast/elm-vim'
 Plug 'fatih/vim-go'
 Plug 'hashivim/vim-hashicorp-tools'
@@ -12,14 +16,19 @@ Plug 'janko-m/vim-test'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'keith/swift.vim'
+Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
 Plug 'pangloss/vim-javascript'
 Plug 'radenling/vim-dispatch-neovim'
+Plug 'slashmili/alchemist.vim'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'uarun/vim-protobuf'
 Plug 'w0rp/ale'
+
+" Enable deoplete at startup
+let g:deoplete#enable_at_startup = 1
 
 " Initialize plugin system
 call plug#end()
@@ -60,6 +69,9 @@ set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
 au BufNewFile,BufRead,BufWrite *.md,*.markdown syntax match Comment /\%^---\_.\{-}---$/
 au FileType go nnoremap <leader>i :GoImport<space>
 
+autocmd FileType html
+      \ call deoplete#custom#buffer_option('auto_complete', v:false)
+
 let test#strategy = "neovim"
 
 set shell=bash\ -l
@@ -98,3 +110,16 @@ endfunction
 inoremap <expr> <tab> InsertTabWrapper()
 inoremap <s-tab> <c-n>
 
+" Run a given vim command on the results of alt from a given path.
+" See usage below.
+function! AltCommand(path, vim_command)
+  let l:alternate = system("alt " . a:path)
+  if empty(l:alternate)
+    echo "No alternate file for " . a:path . " exists!"
+  else
+    exec a:vim_command . " " . l:alternate
+  endif
+endfunction
+
+" Find the alternate file for the current path and open it
+nnoremap <leader>. :w<cr>:call AltCommand(expand('%'), ':e')<cr>

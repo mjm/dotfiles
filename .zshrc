@@ -101,8 +101,10 @@ prompt pure
 export PATH=$HOME/bin:$PATH
 export EDITOR=nvim
 
-export TRAVIS_KEYCHAIN_DIR=/p/travis
-eval "$(/p/travis/trvs/bin/trvs init -)"
+if [[ -d /p/travis ]]; then
+  export TRAVIS_KEYCHAIN_DIR=/p/travis
+  eval "$(/p/travis/trvs/bin/trvs init -)"
+fi
 
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc

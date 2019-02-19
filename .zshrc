@@ -101,7 +101,7 @@ prompt pure
 export PATH=$HOME/bin:$PATH
 export EDITOR=nvim
 
-if [[ -d /p/travis ]]; then
+if [[ -d /p/travis/trvs ]]; then
   export TRAVIS_KEYCHAIN_DIR=/p/travis
   eval "$(/p/travis/trvs/bin/trvs init -)"
 fi

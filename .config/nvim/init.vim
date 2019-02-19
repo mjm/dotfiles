@@ -74,7 +74,7 @@ autocmd FileType html
 
 let test#strategy = "neovim"
 
-set shell=bash\ -l
+set shell=zsh\ -l
 
 " Mappings
 
